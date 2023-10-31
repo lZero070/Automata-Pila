@@ -6,6 +6,7 @@ from django.shortcuts import redirect
 from .models import Historial
 from django.shortcuts import redirect
 
+
 class CrearGrafo:
     @csrf_exempt
     def grafo(request):
