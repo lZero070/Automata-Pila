@@ -1,10 +1,29 @@
-function mensajeVoz(){
-    if(document.getElementById("mensajeAutomata")!=null){
-        let textoMens=new SpeechSynthesisUtterance();
-        textoMens.voice=speechSynthesis.getVoices()[5];
-        textoMens.rate=1;
-        textoMens.volume=1;
-        textoMens.text=document.getElementById("mensajeAutomata").innerText;
+function mensajeVoz() {
+    if (document.getElementById("mensajeAutomata") != null) {
+        let textoMens = new SpeechSynthesisUtterance();
+        let idiomaSel = document.getElementById("lenguaje").value;
+
+        // Configura la voz según el idioma seleccionado
+        switch (idiomaSel) {
+            case "Espaniol":
+                textoMens.voice = speechSynthesis.getVoices().find(voice => voice.lang === "es-ES");
+                break;
+            case "English":
+                textoMens.voice = speechSynthesis.getVoices().find(voice => voice.lang === "en-US");
+                break;
+            case "Frances":
+                textoMens.voice = speechSynthesis.getVoices().find(voice => voice.lang === "fr-FR");
+                break;
+            // Agrega más casos para otros idiomas si es necesario
+            default:
+                // Establece una voz predeterminada si no se encuentra el idioma seleccionado
+                textoMens.voice = speechSynthesis.getVoices().find(voice => voice.lang === "es-ES");
+                break;
+        }
+
+        textoMens.rate = 1;
+        textoMens.volume = 1;
+        textoMens.text = document.getElementById("mensajeAutomata").innerText;
         speechSynthesis.speak(textoMens);
     }
 }
