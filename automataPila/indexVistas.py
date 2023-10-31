@@ -36,6 +36,7 @@ class CrearGrafo:
                 break
         if(len(palabra)==0):
             palabraVal=False
+            
         palabra_invertida = ""
         if palabraVal==True:
             while len(pila) > 0:
