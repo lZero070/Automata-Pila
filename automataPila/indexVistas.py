@@ -5,7 +5,7 @@ from .models import Historial
 from django.shortcuts import redirect
 from .models import Historial
 from django.shortcuts import redirect
-
+#C:/Users/lgniw/OneDrive/Documents/GitHub/Automata-Pila/automataPila/vista/static/grafo.html
 
 class CrearGrafo:
     @csrf_exempt
