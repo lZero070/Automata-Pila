@@ -141,8 +141,8 @@ input[type="text"], button[type="submit"] {
     padding: 1rem;
     border-radius: 0.5rem;
     border: none;
-  }
-  
+}
+
 input[type="text"] {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
@@ -153,18 +153,18 @@ button[type="submit"] {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     transition: 0.2s ease;
 }
-  
+
 button[type="submit"]:hover {
     background-color: #10549f;
 }
-  
+
 ul{
     margin-top: 2rem;
     padding-left: 2rem;
     list-style-type: none;
     text-align: center;
 }
-  
+
 li{
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
@@ -181,7 +181,7 @@ th, td{
     padding: 8px;
     text-align: left;
 }
-  
+
 th{
     background-color: #f2f2f2;
     color: #444;

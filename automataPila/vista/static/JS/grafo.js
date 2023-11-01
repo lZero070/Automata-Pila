@@ -3,7 +3,6 @@ function mensajeVoz() {
         let textoMens = new SpeechSynthesisUtterance();
         let idiomaSel = document.getElementById("lenguaje").value;
 
-        // Configura la voz según el idioma seleccionado
         switch (idiomaSel) {
             case "Espaniol":
                 textoMens.voice = speechSynthesis.getVoices().find(voice => voice.lang === "es-ES");
@@ -14,9 +13,7 @@ function mensajeVoz() {
             case "Frances":
                 textoMens.voice = speechSynthesis.getVoices().find(voice => voice.lang === "fr-FR");
                 break;
-            // Agrega más casos para otros idiomas si es necesario
             default:
-                // Establece una voz predeterminada si no se encuentra el idioma seleccionado
                 textoMens.voice = speechSynthesis.getVoices().find(voice => voice.lang === "es-ES");
                 break;
         }
@@ -104,7 +101,7 @@ function interfazIdioma(){
                         cadenaCompleta=reemplazarCadena(segundaParte,"has non-alphabet symbols or is an empty word.",cadenaCompleta);
                     }
                     else{
-                       cadenaCompleta=reemplazarCadena(segundaParte,"is not a palindrome.",cadenaCompleta); 
+                        cadenaCompleta=reemplazarCadena(segundaParte,"is not a palindrome.",cadenaCompleta); 
                     }
                 }
                 document.getElementById("mensajeAutomata").innerText=cadenaCompleta;
@@ -238,7 +235,7 @@ function reemplazarCadena(cadenaVieja, cadenaNueva, cadenaCompleta) {
             cadenaCompleta= cadenaCompleta.substring(0, i) + cadenaNueva + cadenaCompleta.substring(i + cadenaVieja.length, cadenaCompleta.length);
         }
     }
-       return cadenaCompleta;
+    return cadenaCompleta;
 }
 function velocidadEleg() {
     let indVelEleg=document.getElementById("velocidad").selectedIndex;
